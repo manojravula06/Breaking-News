@@ -5,9 +5,6 @@ const Header = () => {
     <div>
       <nav className="navbar navbar-expand-lg bg-dark">
         <div className="container-fluid">
-          <a href="/" className="navbar-brand text-light">
-            OLA
-          </a>
           <button
             className="navbar-toggler"
             type="button"
@@ -22,11 +19,13 @@ const Header = () => {
         </div>
         <div className="collapse navbar-collapse" id="navitem">
           <ul className="navbar-nav text-light">
-            <li className="p-2">Home</li>
-            <li className="nav-item text-nowrap p-2">Ola Ride</li>
-            <li className="nav-item text-nowrap p-2">Ola Money</li>
-            <li className="nav-item p-2">careers</li>
-            <li className="nav-item p-2">About</li>
+            <li className="nav-item text-nowrap mx-1">Drive with ola</li>
+            <li className="nav-item text-nowrap mx-1">Ola Money</li>
+            <li className="nav-item text-nowrap mx-1">Ola Corporate</li>
+            <li className="nav-item text-nowrap mx-1">Ola Foundation</li>
+            <li className="nav-item text-nowrap mx-1">Share</li>
+            <li className="nav-item text-nowrap mx-1">Offers</li>
+            <li className="nav-item text-nowrap mx-1">Support</li>
           </ul>
         </div>
       </nav>
