@@ -1,9 +1,18 @@
-import React from 'react'
-import Header from '../Navbar/Navbar'
+import React,{useEffect} from 'react'
+import Header from '../Navbar/Navbar';
+import getAllMatches from '../../API/Matches';
+
 const Landingpage = () => {
-  return (
+
+
+useEffect(()=>{
+getAllMatches()
+},[])
+ 
+return (
     <div>
         <Header/>
+
     </div>
   )
 }
