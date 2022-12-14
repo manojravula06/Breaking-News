@@ -6,7 +6,9 @@ const Landingpage = () => {
   const [post, setPost] = useState([]);
   const Post = async () => {
     axios.get('https://jsonplaceholder.typicode.com/posts')
-    .then((response)=> setPost(response.data))
+    .then((response)=>{ 
+      console.log(response.data)
+      setPost(response.data)})
   }
 
   useEffect(() => {
@@ -16,9 +18,9 @@ const Landingpage = () => {
   return (
     <div>
       <Header />
-      {/* {post.map((post) => {
+      {post.map((post) => {
         return <div className="bg-success m-2 text-light">{post.title}</div>;
-      })} */}
+      })}
       {/* <div className="bg-success m-2 text-light">International</div>
       <div className="bg-success m-2 text-light">League</div>
       <div className="bg-success m-2 text-light">Domestic</div>
