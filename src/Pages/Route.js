@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Landingpage from "./LandingPage/Landingpage";
 import Test from "./Test";
+import News from "../API/News";
 
 const AppRoutes=()=> {
   return (
@@ -8,6 +9,7 @@ const AppRoutes=()=> {
             <Routes>
                 <Route exact path='/' element={<Landingpage/>} />
                 <Route exact path='/test' element={<Test/>}/>
+                <Route exact path="/news" element={<News/>}/>
             </Routes>
         </Router>
   )

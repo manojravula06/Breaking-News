@@ -1,19 +1,28 @@
-import React,{useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../Navbar/Navbar";
-import getAllMatches from '../../API/Matches';
-// import Data from "../../API/Data";
+import axios from "axios";
 
 const Landingpage = () => {
+  const [post, setPost] = useState([]);
+  const Post = async () => {
+    axios.get('https://jsonplaceholder.typicode.com/posts')
+    .then((response)=> setPost(response.data))
+  }
 
+  useEffect(() => {
+    Post();
+  }, []);
 
-useEffect(()=>{
-getAllMatches()
-// Data()
-},[])
- 
   return (
     <div>
       <Header />
+      {/* {post.map((post) => {
+        return <div className="bg-success m-2 text-light">{post.title}</div>;
+      })} */}
+      {/* <div className="bg-success m-2 text-light">International</div>
+      <div className="bg-success m-2 text-light">League</div>
+      <div className="bg-success m-2 text-light">Domestic</div>
+      <div className="bg-success m-2 text-light">Women</div> */}
     </div>
   );
 };
