@@ -24,10 +24,10 @@ const Header = () => {
         </div>
         <div className="collapse navbar-collapse" id="navitem">
           <ul className="navbar-nav text-light">
-            <li className="nav-item text-nowrap mx-1"onClick={gotonews}>Internation News</li>
-            <li className="nav-item text-nowrap mx-1">Internation News</li>
-            <li className="nav-item text-nowrap mx-1">Internation News</li>
-            <li className="nav-item text-nowrap mx-1">Internation News</li>
+            <li className="nav-item text-nowrap mx-1"onClick={gotonews}>International News</li>
+            <li className="nav-item text-nowrap mx-1">International News</li>
+            <li className="nav-item text-nowrap mx-1">International News</li>
+            <li className="nav-item text-nowrap mx-1">International News</li>
           </ul>
         </div>
       </nav>
