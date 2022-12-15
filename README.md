@@ -4,8 +4,7 @@ Breaking News App is an application designed to help users stay up to date with 
 
 
 ## Link
-https://my-personal-book-shelf.herokuapp.com/
-
+https://github.com/manojravula06/Breaking-News
 
 ## Installation
 

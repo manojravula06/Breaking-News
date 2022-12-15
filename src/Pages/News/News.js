@@ -3,15 +3,16 @@ import { useNavigate } from "react-router-dom";
 import {CircularProgress} from '@mui/material';
 import axios from "axios";
 import { API_BASE_URL } from "../../Config/Config";
-import logo from '../../assets/logo.png';
+import international from '../../assets/international.png';
+
 
 const News = () => {
   const navigate=useNavigate()
   const [news, setNews] = useState([]);
   const [loading,setLoading]= useState(true);
 
-  const getLoading=()=>{
-    return loading &&<div className="d-flex justify-content-center">
+const getLoading=()=>{
+    return loading &&<div className="">
      <CircularProgress/>
     </div>
   }
@@ -31,7 +32,11 @@ const News = () => {
       !loading &&
       ( 
         <>
-        <img src={logo} className='m-2' style={{width:'15rem'}} alt="logo here"/>
+        <div className="d-flex justify-content-center">
+        <img src={international} alt="no logo" style={{height:'5rem'}}/>
+          <h4 className="my-4">International</h4>
+        </div>
+       
         <div className='lg-text-center d-flex flex-wrap'>
         {news.map((post) => {
           return (
