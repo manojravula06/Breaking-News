@@ -1,7 +1,7 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Landingpage from "./LandingPage/Landingpage";
 import Test from "./Test";
-import News from "../API/News";
+import News from "../Pages/News/News";
 
 const AppRoutes=()=> {
   return (

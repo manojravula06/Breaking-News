@@ -1,6 +1,11 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 const Header = () => {
+  const navigate=useNavigate()
+  const gotonews=(e)=>{
+    e.preventDefault()
+    navigate('/news')
+  }
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-dark">
@@ -19,13 +24,10 @@ const Header = () => {
         </div>
         <div className="collapse navbar-collapse" id="navitem">
           <ul className="navbar-nav text-light">
-            <li className="nav-item text-nowrap mx-1">Drive with ola</li>
-            <li className="nav-item text-nowrap mx-1">Ola Money</li>
-            <li className="nav-item text-nowrap mx-1">Ola Corporate</li>
-            <li className="nav-item text-nowrap mx-1">Ola Foundation</li>
-            <li className="nav-item text-nowrap mx-1">Share</li>
-            <li className="nav-item text-nowrap mx-1">Offers</li>
-            <li className="nav-item text-nowrap mx-1">Support</li>
+            <li className="nav-item text-nowrap mx-1"onClick={gotonews}>Internation News</li>
+            <li className="nav-item text-nowrap mx-1">Internation News</li>
+            <li className="nav-item text-nowrap mx-1">Internation News</li>
+            <li className="nav-item text-nowrap mx-1">Internation News</li>
           </ul>
         </div>
       </nav>
