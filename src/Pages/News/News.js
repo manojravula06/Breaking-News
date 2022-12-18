@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {CircularProgress} from '@mui/material';
-import axios from "axios";
 import { API_BASE_URL } from "../../Config/Config";
+import axios from 'axios';
 import international from '../../assets/international.png';
 
 
-const News = () => {
+
+const International = () => {
   const navigate=useNavigate()
   const [news, setNews] = useState([]);
   const [loading,setLoading]= useState(true);
@@ -18,10 +19,16 @@ const getLoading=()=>{
   }
 
   const getNews = async () => {
-    axios.get(API_BASE_URL).then((response) => {
-      setLoading(false);
-      setNews(response.data.articles);
-    });
+    try {
+      axios.get(API_BASE_URL).then((response) => {
+        setLoading(false);
+        console.log(response)
+        setNews(response.data.articles);
+      });
+      } catch (error) {
+        console.log(error)
+      }
+     
   };
   useEffect(() => {
     getNews();
@@ -67,4 +74,4 @@ const getLoading=()=>{
   );
 };
 
-export default News;
+export default International;

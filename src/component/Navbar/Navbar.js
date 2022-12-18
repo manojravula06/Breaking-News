@@ -4,7 +4,7 @@ const Header = () => {
   const navigate=useNavigate()
   const gotonews=(e)=>{
     e.preventDefault()
-    navigate('/news')
+    navigate('/international')
   }
   return (
     <div>
@@ -24,7 +24,7 @@ const Header = () => {
         </div>
         <div className="collapse navbar-collapse" id="navitem">
           <ul className="navbar-nav text-light">
-            <li className="nav-item text-nowrap mx-1"onClick={gotonews}>International News</li>
+            <li className="nav-item text-nowrap mx-1"onClick={gotonews}>Tesla News</li>
             <li className="nav-item text-nowrap mx-1">International News</li>
             <li className="nav-item text-nowrap mx-1">International News</li>
             <li className="nav-item text-nowrap mx-1">International News</li>
